@@ -7,6 +7,11 @@ antigen-bundle ruby
 antigen-bundle rvm
 antigen-bundle brew
 antigen-bundle bundler
+antigen-bundle docker
+antigen-bundle jsontools
+antigen-bundle pep8
+antigen-bundle python
+antigen-bundle web-search
 
 antigen-bundle zsh-users/zsh-syntax-highlighting
 
