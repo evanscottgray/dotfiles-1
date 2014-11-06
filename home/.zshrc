@@ -1,5 +1,4 @@
 source ~/.homesick/repos/dotfiles/antigen/antigen.zsh
-zsh ~/.test.zsh
 
 antigen use oh-my-zsh
 antigen-bundle git
