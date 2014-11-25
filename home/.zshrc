@@ -21,7 +21,7 @@ antigen-apply
 
 DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
-
+# Custom Functions
 # Colored man pages (from https://wiki.archlinux.org/index.php/Man_Page#Colored_man_pages)
 man() {
   env \
@@ -34,7 +34,12 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
       man "$@"
 }
+# Dropbox URL Cleaner (See this blog post: https://evanscottgray.svbtle.com/cleaning-up-dropbox-screenshot-urls)
+dbss() {
+  DBURL=`pbpaste | sed -e 's/www.dropbox.com/dl.dropboxusercontent.com/' -e 's/\?dl=0//' | tr -d "\n"`; echo -e "The URL: \e[36m $DBURL \\e[39m has been copied to your clipboard. Yay."; echo $DBURL | pbcopy
+}
 
+# Custom Aliases
 alias dfw="ssh travis.whiteaker@bastion1.dfw1.rackspace.net"
 alias iad="ssh travis.whiteaker@bastion1.iad3.rackspace.net"
 alias lon="ssh travis.whiteaker@bastion1.lon3.rackspace.net"
