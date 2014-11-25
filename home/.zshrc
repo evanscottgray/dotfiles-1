@@ -54,7 +54,9 @@ alias cs="cowsay"
 alias archive="ssh trav@archiveark.com"
 alias config="ssh rack@config.trwhiteaker.com"
 alias zeus="ssh trav@zeus1"
-alias t="stoken"
+
+# Fancy Auto-Copy Stoken
+alias t='stoken | tr -d "\n" | pbcopy'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -82,6 +84,3 @@ bindkey -s "^[Oj" "*"
 bindkey -s "^[Oo" "/"
 bindkey -s "^[OX" "="
 bindkey -s "^[" "cl"
-
-
-
